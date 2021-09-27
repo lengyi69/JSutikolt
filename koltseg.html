@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Útiköltség</title>
+    <link href="stillap.css" rel="stylesheet" />
+    <script src="kod.js"type="text/javascript"></script>
+</head>
+<body>
+    <h1>Útiköltség elszámolás</h1>
+    <form name="utikoltseg">
+        <legend>Név</legend>
+        <input type="text" name="nev" value=""placeholder="Név" />
+        <br />
+        <legend>A közlekedési eszkőz kiválasztása</legend>
+        <select id="valaszt"onchange="valasztas(this)">
+            <option value="0">Jármű</option>
+            <option value="1">Busz</option>
+            <option value="2">Vonat</option>
+            <option value="3">Kocsi</option>
+        </select>
+        <div id="kocsi">
+            <label>A motor űrtartalma:</label>
+            <input type="number" name="urtartalom" value=""min="600" max="5000" step="10" placeholder="cm3" />
+            <br />
+            <label>Megtett távolság</label>
+            <input type="number" name="ut" value="" placeholder="kilométer" />
+            <br />
+            <label>A költségtérítés:</label>
+            <input type="text" name="koltsegk" value="" />
+        </div>
+        <div id="buszvonat">
+            <label>A bérlet távolsága </label>
+            <br />
+            <input type="number" name="btav" value="10" min="10" max="50"step="5"/>
+            <br />
+            <label>A költségtérítés</label>
+            <input type="text" name="koltsegb" value="" />
+        </div>
+    </form>
+</body>
+</html>
